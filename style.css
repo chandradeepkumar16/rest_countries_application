@@ -1,0 +1,226 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: var(--ff-ibm);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+:root {
+    --clr-white: hsl(0, 0%, 100%);
+    --body: hsl(0, 0%, 98%);
+    --spacer-16: 1rem;
+    --spacer-30: 1.875rem;
+    --clr-almost-black: #111517;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+    font-family: "Numito Sans", sans-serif;
+    background-color: var(--body);
+    color: hsl(200, 15%, 8%);
+    overflow-x: hidden;
+}
+
+.heading {
+    font-size: calc(14rem / 16);
+    font-weight: 800;
+}
+
+.theme {
+    font-size: calc(12rem / 16);
+}
+
+/* svg change colour, and appy border */
+path {
+    fill: white;
+    stroke: black;
+    stroke-width: 30px;
+}
+
+.highLight {
+    font-weight: 600;
+}
+
+.country-details {
+    font-weight: 100;
+}
+
+
+.nav {
+    padding-block: var(--spacer-30);
+    padding-inline: var(--spacer-16);
+    max-width: 80rem;
+}
+
+
+svg.svg-inline--fa.fa-moon.fa-w-16 {
+    max-height: 1.25rem;
+    max-width: 1.25rem;
+    font-size: small;
+    transform: rotate(-35deg);
+}
+
+.country-details-content {
+    margin-top: 1rem;
+}
+
+.flags {
+    min-height: 10rem;
+}
+
+.paraName {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+.country-details-title {
+    margin-top: 1rem;
+    font-weight: 800;
+    font-size: 1.125rem;
+    line-height: 1.4;
+}
+
+.country-population,
+.country-region,
+.country-capital {
+    font-size: calc(14rem / 16);
+    margin-bottom: .25rem;
+}
+
+
+.countries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    place-items: center;
+    gap: 1.5rem;
+    padding-top: 2rem;
+}
+
+.allCountries {
+    max-width: 16.5rem;
+    box-shadow: 0 1px 6px 20px rgba(0, 0, 0, 0.06), 0 1px 2px 4px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--clr-white);
+    color: var(--clr-almost-black);
+    padding-inline: 0;
+    padding-block-end: 1rem;
+    padding-block-start: 0;
+}
+
+
+.country-details-wrapper {
+    text-align: left;
+}
+
+.hide-card {
+    display: none;
+}
+
+.main {
+    position: relative;
+    max-width: 80rem;
+    padding-inline: var(--spacer-16);
+}
+
+
+.searchCountry {
+    position: relative;
+}
+
+.fa-search {
+    position: absolute;
+    top: 20%;
+    left: 2.5rem;
+    color: hsl(0, 0%, 52%);
+    z-index: 100;
+}
+
+input[type="search"] {
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    padding-left: 20%;
+    border: none;
+    border-radius: 4px;
+    margin: 2rem auto;
+    background-color: var(--clr-white);    
+    color: hsl(200, 15%, 8%);
+}
+
+
+.country-details-img {
+    object-fit: cover;
+    min-height: 14.3125rem;
+    border-radius: 6px;
+    margin: auto;
+}
+
+.border {
+    margin: 5px auto;
+}
+
+.fa-long-arrow-alt-left {
+    position: absolute;
+    left: 1rem;
+    top: 2px;
+}
+
+
+
+.languages {
+    flex-wrap: wrap;
+    display: flex;
+    gap: .25rem;
+}
